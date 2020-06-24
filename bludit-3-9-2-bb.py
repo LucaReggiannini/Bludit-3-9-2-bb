@@ -17,6 +17,7 @@ def help():
 	print("This script is based on CVE-2019-17240 (https://github.com/bludit/bludit/pull/1090)\n")
 	print("usage: python ./bludit-3-9-2-bb.py -l 'http://sitename.com/admin/login' -u ./usernames_file_list.txt -p ./passwords_file_list.txt")
 	print("help : python ./bludit-3-9-2-bb.py -h")
+	print("verbose mode: add parameter '-v'")
 	exit()
 
 

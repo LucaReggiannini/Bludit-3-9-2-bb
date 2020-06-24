@@ -10,16 +10,13 @@ passwords_file_list = ""
 usernames_list = ""
 passwords_list = ""
 
-def p(text):
-	print("")
-	print(text)
-	print("")
 
 def help():
-	p("Bludit 3.9.2 - bruteforce bypass")
-	p("This script is based on CVE-2019-17240 (https://github.com/bludit/bludit/pull/1090)")
-	p("usage: python ./bludit-3-9-2-bb.py -l 'http://sitename.com/admin/login' -u ./usernames_file_list.txt -p ./passwords_file_list.txt")
-	p("help : python ./bludit-3-9-2-bb.py -h")
+	print("Bludit 3.9.2 - bruteforce bypass")
+	print("https://github.com/LucaReggiannini/Bludit-3-9-2-bb\n")
+	print("This script is based on CVE-2019-17240 (https://github.com/bludit/bludit/pull/1090)\n")
+	print("usage: python ./bludit-3-9-2-bb.py -l 'http://sitename.com/admin/login' -u ./usernames_file_list.txt -p ./passwords_file_list.txt")
+	print("help : python ./bludit-3-9-2-bb.py -h")
 	exit()
 
 
@@ -44,7 +41,7 @@ for option, value in option_value_pair:
 
 # Check if main variables are set
 if not login_url or not usernames_file_list or not passwords_file_list:
-	p("Error: Incorrect arguments. See this help:")
+	print("\nError: Incorrect arguments. See this help:\n")
 	help()
 	
 

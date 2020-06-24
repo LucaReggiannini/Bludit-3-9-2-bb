@@ -12,8 +12,8 @@ usage: python ./bludit-3-9-2-bb.py -l 'http://sitename.com/admin/login' -u ./use
 -l : login page (example: http://192.168.1.50/admin/login)
 -u : file with usernames list (one by line)
 -p : file with passwords list (one by line)
--h : help
--v : verbose (show all tested 'username:password')
+-h : help (optional)
+-v : verbose (optional, show all tested 'username:password')
 ```
 
 

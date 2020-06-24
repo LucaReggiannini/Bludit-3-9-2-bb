@@ -46,7 +46,7 @@ if not login_url or not usernames_file_list or not passwords_file_list:
 	
 
 # Start the attack
-p("Starting bruteforce...")
+print("Starting bruteforce...")
 for username in (open(usernames_file_list, 'r')).readlines(): 
 	for password in (open(passwords_file_list, 'r')).readlines(): 
 

@@ -3,6 +3,7 @@ Bludit 3.9.2 - bruteforce bypass - CVE-2019-17240
 \
 \
 Very simple script based on CVE-2019-17240.
+\
 Original POC and explanation: https://github.com/bludit/bludit/pull/1090.
 \
 \

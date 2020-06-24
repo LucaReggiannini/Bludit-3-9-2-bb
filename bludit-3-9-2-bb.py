@@ -15,9 +15,12 @@ def help():
 	print("Bludit 3.9.2 - bruteforce bypass")
 	print("https://github.com/LucaReggiannini/Bludit-3-9-2-bb\n")
 	print("This script is based on CVE-2019-17240 (https://github.com/bludit/bludit/pull/1090)\n")
-	print("usage: python ./bludit-3-9-2-bb.py -l 'http://sitename.com/admin/login' -u ./usernames_file_list.txt -p ./passwords_file_list.txt")
-	print("help : python ./bludit-3-9-2-bb.py -h")
-	print("verbose mode: add parameter '-v'")
+	print("usage: python ./bludit-3-9-2-bb.py -l 'http://sitename.com/admin/login' -u ./usernames_file_list.txt -p ./passwords_file_list.txt\n")
+	print("-l : login page (example: http://192.168.1.50/admin/login)")
+	print("-u : file with usernames list (one by line)")
+	print("-p : file with passwords list (one by line)")
+	print("-h : help (optional)")
+	print("-v : verbose (optional, show all tested 'username:password')")
 	exit()
 
 
